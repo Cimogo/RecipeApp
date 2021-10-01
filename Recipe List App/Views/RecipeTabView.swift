@@ -13,11 +13,7 @@ struct RecipeTabView: View {
     var body: some View {
         
         TabView{
-            Text("Featured View")
-         /*   Image("eggplant parmesan")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 50, height: 50)*/
+            RecipeFeaturedView()
             .tabItem {
                 VStack {
                     Image(systemName: "star.fill")
@@ -33,6 +29,7 @@ struct RecipeTabView: View {
                     }
                 }
         }
+        .environmentObject(RecipeModel())
     }
 }
 
